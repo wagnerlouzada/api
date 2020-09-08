@@ -1,0 +1,34 @@
+{
+    "mode": "development",
+    "development": {
+        "url": "http://www.joynuz.com",
+        "database": {
+            "provider": "postgres",
+            "host": "localhost",
+            "password":"joynuz",
+            "user":"postgres",
+            "port": "5432",
+            "db": "Joynuz"
+        },
+        "server": {
+            "host": "localhost",
+            "port": "4041"
+        }
+    },
+    "production": {
+        "url": "http://www.joynuz.com",
+        "database": {
+            "provider": "postgres",
+            "host": "localhost",
+            "user":"postgres",
+            "password":"joynuz",
+            "port": "5432",
+            "db": "Joynuz"
+        },
+        "server": {
+            "host": "localhost",
+            "port": "4041"
+        }
+    },
+    "routes" : ["usuario","joyner","joytype"]
+}
