@@ -2,45 +2,11 @@ const express = require('express');
 const Sequelize = require('sequelize');
 const router_joytype = require('express').Router();
 
-const JoyType = db.define('joytypes', {
-    // attributes
-    description:
-    {
-        type: Sequelize.STRING,
-        allowNull: true
-    },
-    language:
-    {
-        type: Sequelize.BIGINT,
-        allowNull: true
-    },
-    original:
-    {
-        type: Sequelize.BIGINT,
-        allowNull: true
-    },
-    price:
-    {
-        type: Sequelize.INTEGER,
-        allowNull: true
-    },
-    template:
-    {
-        type: Sequelize.JSON,
-        allowNull: true
-    },
-    translation:
-    {
-        type: Sequelize.BOOLEAN,
-        allowNull: true
-    }
+const modelJoyTye = require('.././models/joytype');
 
-}, {
-    // options    
-    // default: null
-    //charset: 'latin1',
-    schema: 'Parameters'
-});
+console.log(modelJoyTye);
+
+const JoyType = db.define('joytypes', modelJoyTye, { schema: 'Parameters' });
 
 router_joytype.put('/joytype/:joytypeId', async (req, res) => {
     var joytypeId = req.params.joytypeId;

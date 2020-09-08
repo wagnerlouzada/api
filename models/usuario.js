@@ -1,7 +1,6 @@
 const Sequelize = require('sequelize');
 
-const Usuario = db.define('usuarios', {
-    // attributes
+const modelUsuario =  {
     firstName:
     {
         type: Sequelize.STRING,
@@ -10,8 +9,6 @@ const Usuario = db.define('usuarios', {
     lastName: {
         type: Sequelize.STRING
     }
-}, {
+};
 
-});
-
-module.exports = usuario;
+module.exports = modelUsuario;

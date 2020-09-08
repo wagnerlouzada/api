@@ -2,19 +2,11 @@ const express = require('express');
 const Sequelize = require('sequelize');
 const router_usuario = require('express').Router(); 
 
-const Usuario = db.define('usuarios', {
-    // attributes
-    firstName:
-    {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    lastName: {
-        type: Sequelize.STRING
-    }
-}, {
+const modelUsuario = require('.././models/usuario');
 
-});
+console.log(modelUsuario);
+
+const Usuario = db.define('usuarios',  modelUsuario , { });
 
 router_usuario.post('/usuario', async (req, res) => {
     try {
