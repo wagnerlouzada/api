@@ -2,14 +2,6 @@ const express = require('express');
 const Sequelize = require('sequelize');
 const router_joyner = require('express').Router(); 
 
-const db = new Sequelize('postgres://postgres:joynuz@localhost:5432/Joynuz') // Example for postgres
- 
-db.authenticate().then(() => {
-    console.log('Connection has been established successfully.');
-}).catch(err => {
-    console.error('Unable to connect to the database:', err);
-});
-
 const Joyner = db.define('joyners', {
     // attributes
     name:
